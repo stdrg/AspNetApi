@@ -8,11 +8,11 @@ namespace WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class VermittlersController : ControllerBase
+    public class VermittlerController : ControllerBase
     {
         private VermittlerRepository _vermittlerRepository;
 
-        public VermittlersController(VermittlerRepository vermittlerRepository)
+        public VermittlerController(VermittlerRepository vermittlerRepository)
         {
             _vermittlerRepository = vermittlerRepository;
         }

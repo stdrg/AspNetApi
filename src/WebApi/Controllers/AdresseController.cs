@@ -10,11 +10,11 @@ namespace WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AdressenController : ControllerBase
+    public class AdresseController : ControllerBase
     {
         private AdressenRepository _adressenRepository;
 
-        public AdressenController(AdressenRepository adressenRepository)
+        public AdresseController(AdressenRepository adressenRepository)
         {
             _adressenRepository = adressenRepository;
         }
@@ -38,7 +38,7 @@ namespace WebApi.Controllers
             return Ok(vermittlerDto);
         }
 
-        [HttpPost]
+        [HttpPost("{vermittlerId}")]
         public ActionResult<Adresse> PostAdresse(AdresseSetDto adresse, long vermittlerId)
         {
             var result = _adressenRepository.PostAdresse(adresse, vermittlerId);
