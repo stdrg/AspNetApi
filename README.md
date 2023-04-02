@@ -14,7 +14,7 @@ Um dieses Projekt ausführen zu können, benötigen Sie Folgendes:
 1. Klonen Sie das Repository oder laden Sie die ZIP-Datei herunter und entpacken Sie sie.
 2. Wechseln Sie in das Verzeichnis des Projekts.
 3. Geben Sie `docker build -t mywebapi .` ein, um das Docker-Image zu erstellen.
-4. Geben Sie `docker run -d -p 8080:80 --name mywebapi mywebapi` ein, um den Docker-Container zu starten.
+4. Geben Sie `docker run -d -p 8080:80 mywebapi` ein, um den Docker-Container zu starten.
 
 Nachdem der Container gestartet wurde, können Sie auf die WebApi über `http://localhost:8080/api` zugreifen.
 
