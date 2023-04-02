@@ -17,7 +17,7 @@ namespace WebApi.Controllers
             _historieRepository = historieRepository;
         }
 
-        [HttpGet("/vermittler/{vermittlerId}")]
+        [HttpGet("/VermittlerHistorie/{vermittlerId}")]
         public ActionResult<VermittlerHistorieDto> GetVermittlerHistorie(long vermittlerId)
         {
             var result = _historieRepository.GetVermittlerHistory(vermittlerId);
@@ -25,7 +25,7 @@ namespace WebApi.Controllers
             else return Ok(result);
         }
 
-        [HttpGet("/adresse/{vermittlerId}")]
+        [HttpGet("/AdressenHistorie/{vermittlerId}")]
         public ActionResult<VermittlerHistorieDto> GetAdresseHistorie(long vermittlerId)
         {
             var result = _historieRepository.GetAddressHistory(vermittlerId);
